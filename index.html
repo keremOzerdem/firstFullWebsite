@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Emine Özerdem Mimarlık</title>
+    <style>
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left 0.5s;
+            padding: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        #align-icon {
+            height: 100%;
+            width: 50px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+            transition: 0.5s;
+            border-right: 1px solid rgba(97, 97, 97, 0.5);
+
+        }
+
+        .carousel img {
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: auto;
+            object-fit: cover;
+        }
+
+        /* footer */
+        .site-footer {
+            background-color: #26272b;
+            padding: 45px 0 20px;
+            font-size: 15px;
+            line-height: 24px;
+            color: #737373;
+        }
+
+        .site-footer hr {
+            border-top-color: #bbb;
+            opacity: 0.5
+        }
+
+        .site-footer hr.small {
+            margin: 20px 0
+        }
+
+        .site-footer h6 {
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            letter-spacing: 2px
+        }
+
+        .site-footer a {
+            color: #737373;
+        }
+
+        .site-footer a:hover {
+            color: #3366cc;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            padding-left: 0;
+            list-style: none
+        }
+
+        .footer-links li {
+            display: block
+        }
+
+        .footer-links a {
+            color: #737373
+        }
+
+        .footer-links a:active,
+        .footer-links a:focus,
+        .footer-links a:hover {
+            color: #3366cc;
+            text-decoration: none;
+        }
+
+        .footer-links.inline li {
+            display: inline-block
+        }
+
+        .site-footer .social-icons {
+            text-align: right
+        }
+
+        .site-footer .social-icons a {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 6px;
+            margin-right: 0;
+            border-radius: 100%;
+            background-color: #33353d
+        }
+
+        .copyright-text {
+            margin: 0
+        }
+
+        @media (max-width:991px) {
+            .site-footer [class^=col-] {
+                margin-bottom: 30px
+            }
+        }
+
+        @media (max-width:767px) {
+            .site-footer {
+                padding-bottom: 0
+            }
+
+            .site-footer .copyright-text,
+            .site-footer .social-icons {
+                text-align: center
+            }
+        }
+
+        .social-icons {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-bottom: 4px
+        }
+
+        .social-icons li.title {
+            margin-right: 15px;
+            text-transform: uppercase;
+            color: #96a2b2;
+            font-weight: 700;
+            font-size: 13px
+        }
+
+        .social-icons a {
+            background-color: #eceeef;
+            color: #818a91;
+            font-size: 16px;
+            display: inline-block;
+            line-height: 44px;
+            width: 44px;
+            height: 44px;
+            text-align: center;
+            margin-right: 8px;
+            border-radius: 100%;
+            -webkit-transition: all .2s linear;
+            -o-transition: all .2s linear;
+            transition: all .2s linear
+        }
+
+        .social-icons a:active,
+        .social-icons a:focus,
+        .social-icons a:hover {
+            color: #fff;
+            background-color: #29aafe
+        }
+
+        .social-icons.size-sm a {
+            line-height: 34px;
+            height: 34px;
+            width: 34px;
+            font-size: 14px
+        }
+
+        .social-icons a.facebook:hover {
+            background-color: #3b5998
+        }
+
+        .social-icons a.twitter:hover {
+            background-color: #00aced
+        }
+
+        .social-icons a.linkedin:hover {
+            background-color: #007bb6
+        }
+
+        .social-icons a.instagram:hover {
+            background-color: #833ab4
+        }
+
+        @media (max-width:767px) {
+            .social-icons li.title {
+                display: block;
+                margin-right: 0;
+                font-weight: 600
+            }
+        }
+
+        /* cards features */
+        .card img {
+            top: 0;
+            left: 0;
+            height: auto;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .btn-outline-dark {
+            color: black;
+        }
+
+        .btn-outline-dark:hover {
+            color: white;
+        }
+
+        @media screen and (max-width: 767px) {
+            #container-rightnavbar {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 767px) {
+            #mobile-navbar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--carousel start-->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/Mutfak/2-1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/Mutfak/13-1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/Mutfak/11.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <!--carousel end-->
+    <div class="py-1 fixed-top">
+        <!--sidenavbar start-->
+        <div class="container" id="container-rightnavbar">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" id="closeBtn" onclick="closeNav()">&times;</a>
+                <a href="#">Anasayfa</a>
+                <a href="#">Hakkımızda</a>
+                <a href="#">İletişim</a>
+                <a href="#">Projelerimiz</a>
+            </div>
+
+            <div id="main">
+
+                <div id="align-icon" class="pl-2 pt-2">
+                    <span style="color: white;" onclick="openNav()"><i class="fas fa-bars fa-w-14 fa-2x"></i></span>
+                </div>
+            </div>
+        </div>
+        <!--sidenavbar end-->
+
+        <!--mobilenavbar start-->
+        <nav class="navbar navbar-expand-lg navbar-dark mt-0 fixed-top" id="mobile-navbar"
+            style="top: 0; margin-top: 0; background-color: #111;">
+            <a class="navbar-brand" href="#"><strong>Emine Özerdem</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ana Sayfa <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projelerimiz</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--mobilenavbar end-->
+    </div>
+
+    <!--accordion start-->
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block btn-outline-dark text-left " type="button"
+                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        İç Mekan Görselleştirme
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <!--multiple targets start-->
+                    <p>
+                        <a class="btn btn-dark tablinks my-1 mx-1" onclick="openimg(event, 'multiCollapseExample1')"
+                            role="button">Antre</a>
+                        <button class="btn btn-dark tablinks my-1 mx-1"
+                            onclick="openimg(event, 'multiCollapseExample2')" type="button">Oturma Odası &
+                            Salon</button>
+                        <button class="btn btn-dark tablinks my-1 mx-1"
+                            onclick="openimg(event, 'multiCollapseExample3')" type="button">Mutfak</button>
+                        <button class="btn btn-dark tablinks my-1 mx-1"
+                            onclick="openimg(event, 'multiCollapseExample4')" type="button">Yatak Odası</button>
+                        <button class="btn btn-dark tablinks my-1 mx-1"
+                            onclick="openimg(event, 'multiCollapseExample5')" type="button">Çocuk Odası</button>
+                        <button class="btn btn-dark tablinks my-1 mx-1"
+                            onclick="openimg(event, 'multiCollapseExample6')" type="button">Banyo & WC</button>
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse tabcontent" id="multiCollapseExample1">
+
+                                <!--Antre kartlar start-->
+                                <div
+                                    class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-md-center">
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Antre/1-1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content. This content
+                                                        is a little bit longer.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Antre/21.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content. This content
+                                                        is a little bit longer.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Antre/7.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Antre kartlar end-->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse tabcontent" id="multiCollapseExample2">
+
+                                <!--Oturma odası kartlar start-->
+                                <div
+                                    class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-md-center">
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/2.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/3.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/4-1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/5.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/6.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/7.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/11.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/7-1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/a.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/a2.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/A3.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/OturmaOdasi/4.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Oturma odası kartlar end-->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse tabcontent" id="multiCollapseExample3">
+
+                                <!--Mutfak kartlar start-->
+                                <div
+                                    class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-md-center">
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/1-1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/2-.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/2-1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/3.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/3-1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/4.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/5.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/5-1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/6.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/7.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/8.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/9.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/9-1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/11.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/13-1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/Z1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Mutfak/Z3.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Mutfak kartlar end-->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse tabcontent" id="multiCollapseExample4">
+
+                                <!--Yatak odası kartlar start-->
+                                <div
+                                    class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-md-center">
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/YatakOdasi/5.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/YatakOdasi/8.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/YatakOdasi/9.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Yatak odası kartlar end-->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse tabcontent" id="multiCollapseExample5">
+
+                                <!--Cocuk odası kartlar start-->
+                                <div
+                                    class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-md-center">
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/CocukOdasi/16.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/CocukOdasi/N26-2-1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/CocukOdasi/N26-2-2.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/CocukOdasi/N26-3-1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/CocukOdasi/Ranza.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Cocuk odası kartlar end-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse tabcontent" id="multiCollapseExample6">
+
+                                <!--Banyo kartlar start-->
+                                <div
+                                    class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-md-center">
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Banyo/13.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Banyo/N14-2.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="card">
+                                            <img src="img/Banyo/Render 4-1.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="text-align: center;"><i
+                                                        class="fas fa-bookmark"></i></h5>
+                                                <!-- <p class="card-text">This is a longer card with supporting text
+                                                        below as a natural lead-in to additional content.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Banyo kartlar end-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--multiple targets end-->
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block btn-outline-dark text-left collapsed" type="button"
+                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                        aria-controls="collapseTwo">
+                        Dış Mekan Görselleştirme
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    Yapılan projeler daha sonra buraya eklenecektir. Bizi bekleyin.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block btn-outline-dark text-left collapsed" type="button"
+                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                        aria-controls="collapseThree">
+                        Restorasyon
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    Yapılan projeler daha sonra buraya eklenecektir. Bizi bekleyin.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--accordion end-->
+
+
+
+    <!--footer start-->
+    <footer class="site-footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>Hakkımızda</h6>
+                    <p class="text-justify"></p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Kategoriler</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Sketch Up Projeleri</a></li>
+                        <li><a href="#">3ds Max Projeleri</a></li>
+                        <li><a href="#">AutoCAD Projeleri</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Hızlı Linkler</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">Projelerimiz</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+                        <a href="#">Kerem R. Özerdem</a>.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/mnzrdmm/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a></li>
+                        <li><a class="linkedin" href="https://www.linkedin.com/in/emine-%C3%B6zerdem-106a966a/"
+                                target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer end-->
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/site.js"></script>
+</body>
+
+</html>
