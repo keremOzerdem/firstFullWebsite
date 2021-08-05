@@ -16,7 +16,7 @@
             z-index: 1;
             top: 0;
             right: 0;
-            background-color: #111;
+            background-image: linear-gradient(#111, #424242);
             overflow-x: hidden;
             padding-top: 60px;
             transition: 0.5s;
@@ -43,6 +43,10 @@
             margin-left: 50px;
         }
 
+        #mobil-navbar {
+            background-image: linear-gradient(#111, #424242);
+        }
+
         #main {
             transition: margin-left 0.5s;
             padding: 20px;
@@ -65,7 +69,7 @@
             z-index: 1;
             top: 0;
             right: 0;
-            background-color: #111;
+            background-image: linear-gradient(#111, #424242);
             overflow-x: hidden;
             padding-top: 20px;
             transition: 0.5s;
@@ -83,7 +87,7 @@
 
         /* footer */
         .site-footer {
-            background-color: #26272b;
+            background-image: linear-gradient(#111, #424242);
             padding: 45px 0 20px;
             font-size: 15px;
             line-height: 24px;
@@ -289,6 +293,14 @@
                 min-height: 450px;
             }
         }
+
+        .btn-dark {
+            background-image: linear-gradient(to right, #111, #4c4c4c);
+        }
+
+        .btn-collapse:hover {
+            background-image: linear-gradient(to right, #111, #7d7d7d);
+        }
     </style>
 </head>
 
@@ -361,7 +373,7 @@
         <div class="card">
             <div class="card-header" id="headingOne">
                 <h2 class="mb-0">
-                    <button class="btn btn-link btn-block btn-outline-dark text-left " type="button"
+                    <button class="btn btn-link btn-block btn-outline-dark text-left btn-collapse" type="button"
                         data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                         aria-controls="collapseOne">
                         İç Mekan Görselleştirme
@@ -967,8 +979,8 @@
         <div class="card">
             <div class="card-header" id="headingTwo">
                 <h2 class="mb-0">
-                    <button class="btn btn-link btn-block btn-outline-dark text-left collapsed" type="button"
-                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    <button class="btn btn-link btn-block btn-outline-dark text-left collapsed btn-collapse"
+                        type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
                         aria-controls="collapseTwo">
                         Dış Mekan Görselleştirme
                     </button>
@@ -983,8 +995,8 @@
         <div class="card">
             <div class="card-header" id="headingThree">
                 <h2 class="mb-0">
-                    <button class="btn btn-link btn-block btn-outline-dark text-left collapsed" type="button"
-                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                    <button class="btn btn-link btn-block btn-outline-dark text-left collapsed btn-collapse"
+                        type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
                         aria-controls="collapseThree">
                         Restorasyon
                     </button>
@@ -1003,15 +1015,18 @@
 
     <!--footer start-->
     <footer class="site-footer mt-5">
-        <div class="container">
+        <div class="container border-bottom pb-4">
             <div class="row">
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6 px-4">
                     <h6>Hakkımızda</h6>
-                    <p class="text-justify"></p>
+                    <p class="text-justify">
+                        Burada Yüksek Mimar Emine ÖZERDEM'in mimari iç mekan, dış mekan ve restorasyon çalışmalarını
+                        sergilenmektedir.
+                    </p>
                 </div>
 
                 <div class="col-xs-6 col-md-3">
-                    <h6>Kategoriler</h6>
+                    <h6>KATEGORİLER</h6>
                     <ul class="footer-links">
                         <li><a href="#">Sketch Up Projeleri</a></li>
                         <li><a href="#">3ds Max Projeleri</a></li>
@@ -1020,7 +1035,7 @@
                 </div>
 
                 <div class="col-xs-6 col-md-3">
-                    <h6>Hızlı Linkler</h6>
+                    <h6>HIZLI LİNKLER</h6>
                     <ul class="footer-links">
                         <li><a href="#">Hakkımızda</a></li>
                         <li><a href="#">İletişim</a></li>
@@ -1029,9 +1044,8 @@
                     </ul>
                 </div>
             </div>
-            <hr>
         </div>
-        <div class="container">
+        <div class="container mt-4">
             <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-12">
                     <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
